@@ -1,4 +1,4 @@
-import { GET_ACCOUNTS_SUCCESS, SHOW_NOTIFICATION } from "../usersActions";
+import { LOGIN_SUCCESS, SHOW_NOTIFICATION } from "../usersActions";
 
 const initialState = {
   accounts: [],
@@ -7,10 +7,14 @@ const initialState = {
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ACCOUNTS_SUCCESS:
-      return { ...state, accounts: action.payload };
+    case LOGIN_SUCCESS:
+      return { ...state, accounts: action.account };
+    case "LOGOUT":
+      return {
+        ...initialState,
+      };
     case SHOW_NOTIFICATION:
-      return { ...state, notification: action.payload };
+      return { ...state, notification: action.message };
     default:
       return state;
   }

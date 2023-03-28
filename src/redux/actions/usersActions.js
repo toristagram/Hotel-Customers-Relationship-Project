@@ -1,10 +1,16 @@
-export const GET_ACCOUNTS = () => ({
-  type: "GET_ACCOUNTS",
+export const LOGIN = (username, password) => ({
+  type: "LOGIN",
+  username,
+  password,
 });
 
-export const GET_ACCOUNTS_SUCCESS = (accounts) => ({
-  type: "GET_ACCOUNTS_SUCCESS",
-  accounts,
+export const LOGIN_SUCCESS = (account) => ({
+  type: LOGIN_SUCCESS,
+  account,
+});
+
+export const LOGOUT = () => ({
+  type: "LOGOUT",
 });
 
 export const SHOW_NOTIFICATION = (message) => ({
