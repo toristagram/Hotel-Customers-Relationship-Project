@@ -1,10 +1,12 @@
 {
     "Accounts": {
       "user1": {
+        "id": 1,
         "password": "pass1",
         "image": "https://firebasestorage.googleapis.com/v0/b/hotel-da9e2.appspot.com/o/avatar-373-456325-512.png?alt=media&token=bf97a9bc-d3ff-44d8-8149-7516efad5039"
       },
       "user2": {
+        "id": 2,
         "password": "pass2",
         "image": "https://firebasestorage.googleapis.com/v0/b/hotel-da9e2.appspot.com/o/avatar-370-456322-512.webp?alt=media&token=21617e25-bdab-4468-b50b-13c1d77fbbd3"
       }

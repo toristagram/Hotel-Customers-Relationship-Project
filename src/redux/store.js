@@ -1,15 +1,7 @@
-import { createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
-import rootReducer from "./actions/reducers/rootReducer";
-import { watchUsersSaga } from "./sagas/usersSaga";
-import { watchRoomsSaga } from "./sagas/roomsSaga";
-import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import middleware from './middleware';
 
-const sagaMiddleware = createSagaMiddleware();
-
-const store = createStore(rootReducer, applyMiddleware(thunk, sagaMiddleware));
-
-sagaMiddleware.run(watchUsersSaga);
-sagaMiddleware.run(watchRoomsSaga);
-
-export default store;
+export default createStore(
+  composeWithDevTools(applyMiddleware(middleware)),
+);
