@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainLayout from "../components/MainLayout";
+import CheckIn from "../components/CheckIn";
+import CheckOut from "../components/CheckOut";
 import FirebaseDB from "../firebase";
 import { ref, onValue } from "firebase/database";
 import { useNavigate, useParams } from "react-router-dom";
@@ -89,12 +91,8 @@ const SingleRoomPage = () => {
             >{`Room ${roomData.number}`}</Typography.Title>
           </Col>
           <Col>
-            <Button type="primary" className="room-button"  >
-              Check In
-            </Button>
-            <Button type="primary" className="room-button"  >
-              Check Out
-            </Button>
+            <CheckIn />
+            <CheckOut />
           </Col>
         </Row>
         <Row>
